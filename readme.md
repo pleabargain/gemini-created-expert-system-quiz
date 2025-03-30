@@ -1,6 +1,8 @@
-Okay, here is a `README.md` file for the script.
+repo
 
-```markdown
+https://github.com/pleabargain/gemini-created-expert-system-quiz
+
+
 # Simple IT Career Advisor Expert System
 
 ## Overview
