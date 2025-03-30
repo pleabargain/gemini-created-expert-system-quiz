@@ -1,0 +1,46 @@
+{
+  "session_id": "4c7175a4-32b4-49ef-b017-c24c84d96b55",
+  "timestamp": "2025-03-30T13:26:19.380732",
+  "initial_prompt": "What is your decision space input? (e.g., 'advice on IT career progression')",
+  "user_decision_space_input": "it career",
+  "outcome": "Provided career advice.",
+  "interactions": [
+    {
+      "step": 1,
+      "question": "What is your current experience level?",
+      "options": {
+        "A": "Entry-level (0-2 years)",
+        "B": "Mid-level (3-7 years)",
+        "C": "Senior-level (8+ years)"
+      },
+      "user_answer_key": "B",
+      "user_answer_value": "Mid-level (3-7 years)"
+    },
+    {
+      "step": 2,
+      "question": "What is your primary career goal right now?",
+      "options": {
+        "A": "Deepen technical expertise in my current field.",
+        "B": "Move into a management or leadership role.",
+        "C": "Explore a different technical specialization within IT (e.g., Cloud, Security, Data Science).",
+        "D": "Increase compensation significantly.",
+        "E": "Improve work-life balance."
+      },
+      "user_answer_key": "C",
+      "user_answer_value": "Explore a different technical specialization within IT (e.g., Cloud, Security, Data Science)."
+    },
+    {
+      "step": 3,
+      "question": "What's your preferred method for acquiring new skills?",
+      "options": {
+        "A": "Formal Certifications (e.g., CompTIA, AWS, Azure, Cisco)",
+        "B": "Structured Courses / Degrees (University, Bootcamps)",
+        "C": "Self-study & Practice (Online tutorials, home labs, books)",
+        "D": "On-the-job Training & Projects"
+      },
+      "user_answer_key": "B",
+      "user_answer_value": "Structured Courses / Degrees (University, Bootcamps)"
+    }
+  ],
+  "final_advice": "Based on your answers, here is some general advice:\n- Look for opportunities to take on more responsibility, lead smaller projects, or mentor juniors.\n- Identify the target specialization and create a learning plan. Look for projects that bridge your current role and the desired one.\n- Look for reputable courses or bootcamps that offer structured learning and potentially career services.\n\nRemember: Continuous learning, networking, and seeking feedback are crucial for IT career growth."
+}

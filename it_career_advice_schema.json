@@ -1,0 +1,83 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "IT Career Advice Session Log",
+    "description": "Schema for logging the interaction and advice from the IT career progression expert system.",
+    "type": "object",
+    "properties": {
+      "session_id": {
+        "description": "Unique identifier for the session.",
+        "type": "string",
+        "format": "uuid"
+      },
+      "timestamp": {
+        "description": "ISO 8601 timestamp when the session log was created.",
+        "type": "string",
+        "format": "date-time"
+      },
+      "initial_prompt": {
+        "description": "The initial question asked to the user about their decision space.",
+        "type": "string"
+      },
+      "user_decision_space_input": {
+        "description": "The user's response defining their decision space.",
+        "type": "string"
+      },
+      "outcome": {
+        "description": "A brief description of the session's result (e.g., provided advice, user input mismatch).",
+        "type": "string"
+      },
+      "interactions": {
+        "description": "An array recording each question-answer step.",
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "step": {
+              "description": "Sequential number of the interaction step.",
+              "type": "integer",
+              "minimum": 1
+            },
+            "question": {
+              "description": "The text of the question asked.",
+              "type": "string"
+            },
+            "options": {
+              "description": "The multiple-choice options presented.",
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              }
+            },
+            "user_answer_key": {
+              "description": "The key (e.g., 'A', 'B') selected by the user.",
+              "type": "string"
+            },
+            "user_answer_value": {
+              "description": "The full text value corresponding to the user's selected key.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "step",
+            "question",
+            "options",
+            "user_answer_key",
+            "user_answer_value"
+          ]
+        }
+      },
+      "final_advice": {
+        "description": "The concluding advice provided based on the interactions. Can be null if advice wasn't generated.",
+        "type": ["string", "null"]
+      }
+    },
+    "required": [
+      "session_id",
+      "timestamp",
+      "initial_prompt",
+      "user_decision_space_input",
+      "outcome",
+      "interactions"
+      // Note: final_advice is not strictly required here to allow logging incomplete sessions
+    ]
+  }
